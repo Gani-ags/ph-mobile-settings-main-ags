@@ -1,0 +1,291 @@
+phosh-mobile-settings 0.40.0
+----------------------------
+Released: June 2024
+* Add more info to debug output
+* Allow to set shell layout (whether to use device information for
+  notches)
+* Allow to set lock-delay
+* Make plugin rows draggable
+* Issues fixed:
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/50
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/53
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/42
+* Contributors:
+    * Gotam Gorabh
+    * Guido Günther
+    * Teemu Ikonen
+* UI translations:
+    * Anders Jonsson (sv)
+    * Antonio Marin (ro)
+    * Artur S0 (ru)
+    * Danial Behzadi (fa)
+    * Daniel Rusek (cs)
+    * Ekaterine Papava (ka)
+    * Jiri Grönroos (fi)
+    * Jordi Mas i Hernandez (ca)
+    * Martin (sl)
+    * Scrambled 777 (hi)
+    * Yaron Shahrabani (he)
+    * Yosef Or Boczko (he)
+    * Yuri Chornoivan (uk)
+
+phosh-mobile-settings 0.39.0
+----------------------------
+Released: May 2024
+* Allow manage custom quick settings
+* osk panel: Allow to configure whether to ignore hardware keyboards
+* Issues fixed:
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/46
+* Contributors:
+    * Gotam Gorabh
+    * Guido Günther
+    * Vladimir Vaskov
+* UI translations:
+    * Anders Jonsson (sv)
+    * Andi Chandler (en_GB)
+    * Andika Triwidada (id)
+    * Artur S0 (ru)
+    * Danial Behzadi (fa)
+    * Daniel Rusek (cs)
+    * Daniel Șerbănescu (ro)
+    * Ekaterine Papava (ka)
+    * Martin (sl)
+    * Sabri Ünal (tr)
+    * Scrambled 777 (hi)
+    * Vladimir Vaskov (ru)
+    * Yaron Shahrabani (he)
+    * Yuri Chornoivan (uk)
+
+phosh-mobile-settings 0.38.0
+----------------------------
+Released: April 2024
+* Add option to print debug info on the command line
+* Contributors:
+    * Guido Günther
+    * Rudra Pratap Singh
+
+phosh-mobile-settings 0.37.0
+----------------------------
+Released: March 2024
+* Improve Organizing favorites in the application panel
+* Improve Sound file selection in feedback panel
+* Allow to set phosh overview's app filter mode
+* Ignore other plugin types when listing lockscreen plugins
+* Issues fixed:
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/40
+* Contributors:
+    * Gotam Gorabh
+    * Guido Günther
+    * Rudra Pratap Singh
+
+phosh-mobile-settings 0.36.0
+----------------------------
+Released: February 2024
+* Allow to arrange and reset phosh's favorites
+  (needs GTK >= 4.13.12)
+* Allow to open panels from the command line / via DBus
+* Allow to configure Phosh's osk long press timer
+* Issues fixed:
+  - https://gitlab.gnome.org/guidog/phosh-mobile-settings/-/issues/3
+* Contributors:
+    * Guido Günther
+    * pseudorandom-x
+    * Rodney Lorrimar
+    * Suraj Kumar Mahto
+    * swaroopanand
+    * Teemu Ikonen
+
+phosh-mobile-settings 0.35.0
+----------------------------
+Released: January 2024
+* Show error when sound file didn't play
+* Fix leaks and patch up to GTK 4.12 for
+  GtkFileDialog
+* Contributors:
+    * Alexandre Iooss
+    * Gotam Gorabh
+    * Guido Günther
+* UI translations:
+    * Alexandre Iooss (fr)
+
+phosh-mobile-settings 0.34.0
+----------------------------
+Released: December 2023
+* Add important gsettings to trouble shooting tab
+* Check style in ci
+* Contributors:
+    * Gotam Gorabh
+    * Guido Günther
+
+phosh-mobile-settings 0.33.0
+----------------------------
+Released: October 2023
+* Add more environment vars and version information to trouble
+  shooting tab
+* Avoid out of place scrollbars on larger screens
+* Switch to gmobile 0.0.3
+* Issues fixed:
+  https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/32
+* Contributors:
+    * Abhijith PA
+    * Gotam Gorabh
+    * Guido Günther
+
+phosh-mobile-settings 0.32.0
+----------------------------
+Released: October 2023
+* Allow to reorder lockscreen plugins
+* Switch away from deprecated libadwaita widgets
+* Issues fixed:
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/17
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/33
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/34
+* Contributors:
+    * Gotam Gorabh
+    * Guido Günther
+
+phosh-mobile-settings 0.31.0
+----------------------------
+Released: August 2023
+* Allow to configure notification priority that triggers screen wakup
+* Make it easier to run from source tree
+* Improved debug info
+* Contributors:
+    * Arun Mani J
+    * Guido Günther
+    * Suraj Kumar Mahto
+
+phosh-mobile-settings 0.30.0
+----------------------------
+Released: August 2023
+* Add troubleshooting tab to about dialog
+  This eases providing debug information
+* Issues fixed:
+    * https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/30
+* Contributors:
+    * Gotam Gorabh
+    * Guido Günther
+
+phosh-mobile-settings 0.29.0
+----------------------------
+Released: July 2023
+* New sensors panel with sensor readings and configuration
+  for automatic high-contrast
+* Allow to enable phosh's suspend button in the system menu
+* Contributors:
+    * Evangelos Ribeiro Tzaras
+    * Guido Günther
+    * undef
+
+phosh-mobile-settings 0.28.0
+----------------------------
+Released: May 2023
+* Add panel for experimental features
+* Robustness fixes
+* Contributors:
+    * Evangelos Ribeiro Tzaras
+    * Guido Günther
+    * Sam Hewitt
+
+phosh-mobile-settings 0.27.0
+----------------------------
+Released: April 2023
+* Allow to configure feedback sounds for ring tone,
+  SMS and instant messages
+
+phosh-mobile-settings 0.26.0
+----------------------------
+Released: March 2023
+* Fix Listbox styling
+* Fix deprecations with Libadwaita 1.3
+* Avoid deprecations with GTK 4.10
+
+phosh-mobile-settings 0.25.0
+----------------------------
+Released: February 2023
+* Use more phone screen friendly default sizes
+* Fix plugin translations
+* New on-screen-keyboard panel that allows to word configure completion
+  modes and show keyboard shortcuts when phosh-osk-stub is detected.
+* Contributors:
+    * Evangelos Ribeiro Tzaras
+    * Guido Günther
+* UI translations:
+    * Guido Günther (de)
+
+phosh-mobile-settings 0.24.1
+----------------------------
+Released: February 2023
+* Fix failure to open lockscreen plugin prefs
+
+phosh-mobile-settings 0.24.0
+----------------------------
+Released: January 2023
+* Make plugin window scrollable
+* Tidy plugin list
+* Contributors:
+       Andrey Skvortsov
+       Guido Günther
+
+phosh-mobile-settings 0.23.1
+----------------------------
+Released: January 2023
+* Fix enabling plugins
+
+phosh-mobile-settings 0.23.0
+----------------------------
+Released: December 2022
+* Allow lockscreen plugins to have preferences
+
+phosh-mobile-settings 0.22.0
+----------------------------
+Released: September 2022
+* Avoid flicker on startup
+* Minor fixes
+* Sync version with phosh
+* Contributors:
+       Guido Günther
+
+phosh-mobile-settings 0.21.1
+----------------------------
+Released: September 2022
+* Work around UI overflow
+* Add UPERFECT X Mini lapdock to detected docks
+* Contributors:
+       Guido Günther
+       Kyle Rankin
+
+phosh-mobile-settings 0.21.0
+----------------------------
+Released: September 2022
+* Allow to enable/disable lockscreen widgets
+* Fix Librem 5 sensor names
+* Contributors:
+	Guido Günther
+	Sebastian Krzyszkowiak
+
+phosh-mobile-settings 0.20.0
+----------------------------
+Released: August 2022
+No changes over 0.20.0~beta1
+
+phosh-mobile-settings 0.20.0~beta1
+----------------------------------
+Released: July 2022
+This is a beta release
+* Align with phosh's version numbering
+* Add application icon
+* Add convergence panel
+* Multiple fixes
+* Contributors:
+	Guido Günther
+	Sam Hewitt
+
+phosh-mobile-settings 0.0.1
+----------------------------
+Released: June 2022
+This is an alpha release
+* Panel for compositor settings (scale-to-fit)
+* Panel for feedback settings
+* Panel for a lock screen stetting (keypad shuffle)
+* Allows for per device plugins and ships a Librem 5 plugin

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="MsPluginLibrem5Panel" parent="MsPluginPanel">
+    <property name="title">Librem 5</property>
+    <child>
+      <object class="AdwClamp">
+        <child>
+	  <object class="GtkScrolledWindow">
+	    <child>
+              <object class="AdwPreferencesPage">
+                <child>
+
+	          <object class="AdwPreferencesGroup">
+                    <property name="title">Librem 5</property>
+	            <child>
+	              <object class="AdwActionRow">
+                        <!-- translators: U-boot is the brand of a bootloader -->
+		        <property name="title" translatable="yes">U-Boot</property>
+                        <property name="use-underline">true</property>
+                        <child>
+                          <object class="GtkLabel" id="uboot_label">
+		            <property name="ellipsize">middle</property>
+		            <property name="valign">center</property>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	            <child>
+	              <object class="AdwActionRow">
+		        <property name="title" translatable="yes">Suspend device</property>
+                        <property name="use-underline">true</property>
+                        <property name="subtitle" translatable="yes">Suspend is experimental</property>
+                        <child>
+                          <object class="GtkButton" id="suspend_button">
+		            <property name="label">suspend now</property>
+		            <property name="valign">center</property>
+                            <signal name="clicked" handler="on_suspend_clicked" swapped="yes"/>
+                            <style>
+                              <class name="destructive-action"/>
+                            </style>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	          </object>
+	        </child>
+
+	        <child>
+	          <object class="AdwPreferencesGroup">
+                    <property name="title" translatable="yes">Temperatures</property>
+	            <child>
+	              <object class="AdwActionRow" id="cpu_temp_row">
+                        <!-- translators: The central processing unit of a smart phone -->
+		        <property name="title" translatable="yes">CPU</property>
+                        <property name="use-underline">true</property>
+                        <child type="prefix">
+                          <object class="GtkImage" id="cpu_temp_icon">
+                            <property name="visible">False</property>
+                            <property name="icon-name">dialog-warning-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="cpu_temp_label">
+		            <property name="ellipsize">middle</property>
+		            <property name="valign">center</property>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	            <child>
+	              <object class="AdwActionRow" id="gpu_temp_row">
+                        <!-- translators: The graphics processing unit of a smart phone -->
+		        <property name="title" translatable="yes">GPU</property>
+                        <property name="use-underline">true</property>
+                        <child type="prefix">
+                          <object class="GtkImage" id="gpu_temp_icon">
+                            <property name="visible">False</property>
+                            <property name="icon-name">dialog-warning-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="gpu_temp_label">
+		            <property name="ellipsize">middle</property>
+		            <property name="valign">center</property>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	            <child>
+	              <object class="AdwActionRow" id="vpu_temp_row">
+                        <!-- translators: The video processing unit of a smart phone -->
+		        <property name="title" translatable="yes">VPU</property>
+                        <property name="use-underline">true</property>
+                        <child type="prefix">
+                          <object class="GtkImage" id="vpu_temp_icon">
+                            <property name="visible">False</property>
+                            <property name="icon-name">dialog-warning-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="vpu_temp_label">
+		            <property name="ellipsize">middle</property>
+		            <property name="valign">center</property>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	            <child>
+	              <object class="AdwActionRow" id="fuelgauge_temp_row">
+		        <property name="title" translatable="yes">Fuel Gauge</property>
+                        <property name="use-underline">true</property>
+                        <child type="prefix">
+                          <object class="GtkImage" id="fuelgauge_temp_icon">
+                            <property name="visible">False</property>
+                            <property name="icon-name">dialog-warning-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="fuelgauge_temp_label">
+		            <property name="ellipsize">middle</property>
+		            <property name="valign">center</property>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	            <child>
+	              <object class="AdwActionRow" id="battery_temp_row">
+		        <property name="title" translatable="yes">Battery</property>
+                        <property name="use-underline">true</property>
+                        <child type="prefix">
+                          <object class="GtkImage" id="battery_temp_icon">
+                            <property name="visible">False</property>
+                            <property name="icon-name">dialog-warning-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="battery_temp_label">
+		            <property name="ellipsize">middle</property>
+		            <property name="valign">center</property>
+                          </object>
+                        </child>
+	              </object>
+	            </child>
+	          </object>
+	        </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

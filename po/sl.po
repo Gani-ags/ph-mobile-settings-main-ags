@@ -1,0 +1,628 @@
+# Slovenian translation for phosh-mobile-settings.
+# Copyright (C) 2024 phosh-mobile-settings's COPYRIGHT HOLDER
+# This file is distributed under the same license as the phosh-mobile-settings package.
+# Martin <miles@filmsi.net>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: phosh-mobile-settings main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Phosh/phosh-mobile-"
+"settings/-/issues\n"
+"POT-Creation-Date: 2024-07-06 13:38+0000\n"
+"PO-Revision-Date: 2024-07-07 12:17+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Slovenian <gnome-si@googlegroups.com>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: data/mobi.phosh.MobileSettings.desktop.in:3
+#: src/ui/mobile-settings-window.ui:6
+msgid "Mobile Settings"
+msgstr "Nastavitve mobilnega telefona"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/mobi.phosh.MobileSettings.desktop.in:12
+msgid "Mobile;Preferences;MobileSettings;"
+msgstr "Mobilnik;mobilni;telefon;nastavitve;MobileSettings;"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:4
+msgid "Phosh Mobile Settings"
+msgstr "Nastavitve mobilnika Phosh"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:8
+msgid ""
+"This app allows you to configure some aspects of Phosh that would otherwise "
+"require command line usage."
+msgstr ""
+"Ta program vam omogoča, da nastavite nekatere vidike Phosha, ki bi sicer "
+"zahtevali uporabo ukazne vrstice."
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:13
+msgid "Advanced settings for Mobile devices using Phosh"
+msgstr "Napredne nastavitve za mobilne naprave, ki uporabljajo Phosh"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:40
+msgid "Available panels"
+msgstr "Razpoložljivi pulti"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:44
+msgid "Compositor panel"
+msgstr "Plošča grafičnega upodobilnika"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:48
+msgid "Feedback panel"
+msgstr "Podokno s povratnimi informacijami"
+
+#: plugins/librem5/ms-plugin-librem5-panel.c:214
+#, c-format
+msgid "Critical temperature is %.2f°C"
+msgstr "Kritična temperatura je %.2f °C"
+
+#. translators: U-boot is the brand of a bootloader
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:19
+msgid "U-Boot"
+msgstr "U-Boot"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:31
+msgid "Suspend device"
+msgstr "Postavi napravo v stanje pripravljenosti"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:33
+msgid "Suspend is experimental"
+msgstr "Stanje pripravljenosti je poskusno"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:51
+msgid "Temperatures"
+msgstr "Temperature"
+
+#. translators: The central processing unit of a smart phone
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:55
+msgid "CPU"
+msgstr "Obremenite CPE"
+
+#. translators: The graphics processing unit of a smart phone
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:74
+msgid "GPU"
+msgstr "GPE"
+
+#. translators: The video processing unit of a smart phone
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:93
+msgid "VPU"
+msgstr "VPE"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:111
+msgid "Fuel Gauge"
+msgstr "Merilnik goriva"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:129
+msgid "Battery"
+msgstr "Baterija"
+
+#: src/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Splošno"
+
+#: src/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Pokaže tipkovne bližnjice‫"
+
+#: src/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Konča program"
+
+#: src/mobile-settings-application.c:30
+msgid "- Manage your mobile settings"
+msgstr "- Upravljajte nastavitve svojega mobilnika"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/mobile-settings-application.c:392
+msgid "translator-credits"
+msgstr "Martin Srebotnjak <miles@filmsi.net>"
+
+#: src/mobile-settings-window.c:77
+msgid "Device"
+msgstr "Naprava"
+
+#: src/ms-feedback-panel.c:137
+msgid "Sound file does not exist"
+msgstr "Zvočna datoteka ne obstaja"
+
+#: src/ms-feedback-panel.c:139
+msgid "Sound file is corrupt"
+msgstr "Zvočna datoteka je okvarjena"
+
+#: src/ms-feedback-panel.c:141
+msgid "Failed to play sound"
+msgstr "Predvajanje zvoka ni uspelo"
+
+#: src/ms-feedback-panel.c:180
+#, c-format
+msgid "Playing %s"
+msgstr "Igranje %s"
+
+#: src/ms-feedback-panel.c:341 src/ms-feedback-panel.c:349
+msgid "none"
+msgstr "brez"
+
+#: src/ms-feedback-panel.c:343
+msgid "low"
+msgstr "nizko"
+
+#. 1.0
+#: src/ms-feedback-panel.c:345 src/ui/ms-osk-panel.ui:36
+msgid "normal"
+msgstr "navadno"
+
+#: src/ms-feedback-panel.c:347
+msgid "critical"
+msgstr "kritično"
+
+#: src/ms-sensor-panel.c:92
+msgid "Normal"
+msgstr "Običajno"
+
+#: src/ms-sensor-panel.c:94
+msgid "Bottom up"
+msgstr "Od spodaj navzgor"
+
+#: src/ms-sensor-panel.c:96
+msgid "Left up"
+msgstr "Levo navzgor"
+
+#: src/ms-sensor-panel.c:98
+msgid "Right up"
+msgstr "Desno navzgor"
+
+#: src/ms-sensor-panel.c:100
+msgid "Undefined"
+msgstr "Nedoločeno"
+
+#: src/ms-sensor-panel.c:135
+msgid "Near"
+msgstr "Blizu"
+
+#: src/ms-sensor-panel.c:135
+msgid "Far"
+msgstr "Daleč"
+
+#: src/ms-sensor-panel.c:253
+msgid "Updating…"
+msgstr "Poteka posodabljanje …"
+
+#: src/ms-sensor-panel.c:269 src/ms-sensor-panel.c:270
+#: src/ms-sensor-panel.c:271
+msgid "Not available"
+msgstr "Ni na voljo"
+
+#: src/ms-sound-row.c:127
+msgid "Custom"
+msgstr "Po meri"
+
+#: src/ms-sound-row.c:308
+msgid "Choose sound file"
+msgstr "Izberite zvočno datoteko"
+
+#: src/ms-util.c:149
+msgid "Full"
+msgstr "Polno"
+
+#: src/ms-util.c:151
+msgid "Quiet"
+msgstr "Tiho"
+
+#: src/ms-util.c:153
+msgid "Silent"
+msgstr "Tiho"
+
+#: src/ui/mobile-settings-window.ui:75
+msgid "Welcome"
+msgstr "Uvodna stran"
+
+#: src/ui/mobile-settings-window.ui:81
+msgid "Welcome to Mobile Settings"
+msgstr "Dobrodošli v mobilnih nastavitvah"
+
+#: src/ui/mobile-settings-window.ui:82
+msgid "Tweak advanced mobile settings"
+msgstr "Prilagodi napredne mobilne nastavitve"
+
+#: src/ui/mobile-settings-window.ui:90
+msgid "Top Bar"
+msgstr "Vrhnja vrstica"
+
+#: src/ui/mobile-settings-window.ui:101
+msgid "Applications"
+msgstr "Programi"
+
+#: src/ui/mobile-settings-window.ui:112
+msgid "Feedback"
+msgstr "Povratne informacije"
+
+#: src/ui/mobile-settings-window.ui:123
+msgid "Compositor"
+msgstr "Grafični upodobilnik"
+
+#: src/ui/mobile-settings-window.ui:134
+msgid "Lockscreen"
+msgstr "Zaklep zaslona"
+
+#: src/ui/mobile-settings-window.ui:145
+msgid "Convergence"
+msgstr "Konvergenca"
+
+#: src/ui/mobile-settings-window.ui:156
+msgid "On Screen Keyboard"
+msgstr "Zaslonska tipkovnica"
+
+#: src/ui/mobile-settings-window.ui:167 src/ui/ms-sensor-panel.ui:28
+msgid "Sensors"
+msgstr "Tipala"
+
+#: src/ui/mobile-settings-window.ui:178
+msgid "Experimental features"
+msgstr "Poskusne funkcionalnosti"
+
+#: src/ui/mobile-settings-window.ui:202
+msgid "_Keyboard Shortcuts"
+msgstr "_Tipkovne bližnjice‫"
+
+#: src/ui/mobile-settings-window.ui:206
+msgid "_About Mobile Settings"
+msgstr "_O programu Mobilne nastavitve"
+
+#: src/ui/ms-applications-panel.ui:11
+msgid "Favorites"
+msgstr "Priljubljeno"
+
+#: src/ui/ms-applications-panel.ui:20
+msgid "Organize Favorites"
+msgstr "Organiziraj priljubljene"
+
+#: src/ui/ms-applications-panel.ui:21
+msgid "Drag and drop the apps below to rearrange your favorite apps"
+msgstr ""
+"Povlecite in spustite spodnje aplikacije, da preuredite svoje najljubše "
+"aplikacije"
+
+#: src/ui/ms-applications-panel.ui:46
+msgid "Reset Favorites"
+msgstr "Ponastavi priljubljene"
+
+#: src/ui/ms-applications-panel.ui:47
+msgid "Set list of favorite apps back to the default"
+msgstr "Nastavi seznam priljubljenih aplikacij nazaj na privzetega"
+
+#: src/ui/ms-applications-panel.ui:51
+msgid "Reset"
+msgstr "Ponastavi"
+
+#: src/ui/ms-applications-panel.ui:62
+msgid "Mobile App Filtering"
+msgstr "Filtriranje aplikacij za mobilne naprave"
+
+#: src/ui/ms-applications-panel.ui:65
+msgid "Set Application Filter Mode"
+msgstr "Nastavite način filtra aplikacij"
+
+#: src/ui/ms-applications-panel.ui:66
+msgid "Show only mobile apps in the overview"
+msgstr "V pregledu pokaži samo mobilne aplikacije"
+
+#: src/ui/ms-compositor-panel.ui:11
+msgid "Scaling down of running applications"
+msgstr "Zmanjšanje števila zagnanih aplikacij"
+
+#: src/ui/ms-compositor-panel.ui:12
+msgid "Only enable this for broken apps that don't fit the screen"
+msgstr "To omogoči samo za nedelujoče aplikacije, ki se ne prilegajo zaslonu"
+
+#: src/ui/ms-compositor-panel.ui:25
+msgid "Scale down all applications"
+msgstr "Zmanjšaj obseg vseh aplikacij"
+
+#: src/ui/ms-compositor-panel.ui:26
+msgid "Forcibly scale down all applications. Only use this as a last resort."
+msgstr ""
+"Prisilno zmanjšajte vse aplikacije. To uporabite le kot zadnjo možnost."
+
+#: src/ui/ms-compositor-panel.ui:29
+msgid "Scale down all apps"
+msgstr "Zmanjšaj obseg vseh aplikacij"
+
+#: src/ui/ms-compositor-panel.ui:35 src/ui/ms-convergence-panel.ui:35
+#: src/ui/ms-features-panel.ui:23 src/ui/ms-features-panel.ui:38
+#: src/ui/ms-lockscreen-panel.ui:37 src/ui/ms-osk-panel.ui:20
+#: src/ui/ms-osk-panel.ui:67 src/ui/ms-osk-panel.ui:83
+#: src/ui/ms-scale-to-fit-row.ui:11
+msgid "Enabled"
+msgstr "Omogočenoe"
+
+#: src/ui/ms-convergence-panel.ui:15
+msgid "No known docks detected"
+msgstr "Zaznana ni nobena znana priklopna postaja"
+
+#: src/ui/ms-convergence-panel.ui:29
+msgid "Map built-in touch screen"
+msgstr "Preslikaj vgrajeni zaslon na dotik"
+
+#: src/ui/ms-features-panel.ui:11
+msgid "Experimental Features"
+msgstr "Poskusne funkcionalnosti"
+
+#: src/ui/ms-features-panel.ui:12
+msgid "Features not yet deemed fully stable"
+msgstr "Funkcije, ki še niso popolnoma stabilne"
+
+#: src/ui/ms-features-panel.ui:16
+msgid "Emergency Calls"
+msgstr "Klici v sili"
+
+#: src/ui/ms-features-panel.ui:17
+msgid ""
+"Enable emergency calls. Please only enable this if you safely can ensure "
+"that it's working with your provider."
+msgstr ""
+"Omogočite klice v sili. To omogočite le, če lahko varno zagotovite, da "
+"deluje z vašim ponudnikom."
+
+#: src/ui/ms-features-panel.ui:31
+msgid "Enable suspend via the system menu"
+msgstr "Omogoči stanje pripravljenosti prek sistemskega menija"
+
+#: src/ui/ms-features-panel.ui:33
+msgid ""
+"Please only enable this if you're aware of the limitations like data "
+"connection loss or missed alarms"
+msgstr ""
+"To omogočite le, če se zavedate omejitev, kot so izguba podatkovne povezave "
+"ali zgrešeni alarmi"
+
+#: src/ui/ms-feedback-panel.ui:16
+msgid "Feedback profile"
+msgstr "Profil za povratne informacije"
+
+#: src/ui/ms-feedback-panel.ui:17
+msgid "The global maximum feedback profile"
+msgstr "Globalni profil za čim več povratnih informacij"
+
+#: src/ui/ms-feedback-panel.ui:32
+msgid "Prefer flash"
+msgstr "Prednost ima bliskavica"
+
+#: src/ui/ms-feedback-panel.ui:33
+msgid "Prefer camera flash over status LED when available"
+msgstr "Prednost daje bliskavici kamere pred lučko LED stanja, ko je na voljo"
+
+#: src/ui/ms-feedback-panel.ui:41
+msgid "Per Application settings"
+msgstr "Nastavitve za aplikacije"
+
+#: src/ui/ms-feedback-panel.ui:54
+msgid "Sounds"
+msgstr "Zvoki"
+
+#: src/ui/ms-feedback-panel.ui:55
+msgid "The sound to use for certain events"
+msgstr "Zvok, ki naj bo uporabljen za določene dogodke"
+
+#: src/ui/ms-feedback-panel.ui:63
+msgid "Phone Calls"
+msgstr "Telefonski klici"
+
+#: src/ui/ms-feedback-panel.ui:69
+msgid "SMS"
+msgstr "SMS"
+
+#: src/ui/ms-feedback-panel.ui:75
+msgid "Instant messages"
+msgstr "Neposredna sporočila"
+
+#: src/ui/ms-feedback-panel.ui:86
+msgid "Screen Wakeup"
+msgstr "Povrnitev zaslona iz pripravljenosti"
+
+#: src/ui/ms-feedback-panel.ui:89
+msgid "Notification urgency that lights up the screen"
+msgstr "Nujnost obvestila, ki osvetli zaslon"
+
+#: src/ui/ms-lockscreen-panel.ui:12
+msgid "Locking and unlocking"
+msgstr "Zaklepanje in odklepanje"
+
+#: src/ui/ms-lockscreen-panel.ui:15
+msgid "Automatic screen lock delay"
+msgstr "Samodejna zakasnitev zaklepanja zaslona"
+
+#: src/ui/ms-lockscreen-panel.ui:16
+msgid "Seconds from screen blank to screen lock"
+msgstr "Čas (v s) od praznega zaslona do zaklepa zaslona"
+
+#: src/ui/ms-lockscreen-panel.ui:30
+msgid "Shuffle keypad"
+msgstr "Premešaj številčnico"
+
+#: src/ui/ms-lockscreen-panel.ui:31
+msgid "Whether to shuffle the numbers on the keypad"
+msgstr "Ali želite premešati številke na tipkovnici"
+
+#: src/ui/ms-lockscreen-panel.ui:48
+msgid "Widgets"
+msgstr "Gradniki"
+
+#: src/ui/ms-lockscreen-panel.ui:49
+msgid "Additional widgets for the lock screen"
+msgstr "Dodatni gradniki za zaklenjeni zaslon"
+
+#: src/ui/ms-osk-panel.ui:13
+msgid "Enable _On Screen Keyboard"
+msgstr "Omo_goči zaslonsko tipkovnico"
+
+#: src/ui/ms-osk-panel.ui:14
+msgid "Whether to show the on screen keyboard when needed"
+msgstr "Ali želite po potrebi prikazati zaslonsko tipkovnico"
+
+#: src/ui/ms-osk-panel.ui:28
+msgid "Unfold long-press"
+msgstr "Razgrni z dolgim pritiskom"
+
+#: src/ui/ms-osk-panel.ui:29
+msgid ""
+"How long to press the center of the home bar to unfold the on screen keyboard"
+msgstr ""
+"Kako dolgo morate pritisniti sredino domače vrstice, da razgrnete zaslonsko "
+"tipkovnico"
+
+#. 0.5
+#: src/ui/ms-osk-panel.ui:34
+msgid "short"
+msgstr "kratko"
+
+#. 2.0
+#: src/ui/ms-osk-panel.ui:38
+msgid "long"
+msgstr "dolgo"
+
+#: src/ui/ms-osk-panel.ui:46
+msgid "Ignore hardware keyboard"
+msgstr "Prezri strojno tipkovnico"
+
+#: src/ui/ms-osk-panel.ui:47
+msgid ""
+"Whether to show the on screen keyboard when a physical keyboard is present"
+msgstr ""
+"Ali želite prikaz zaslonske tipkovnice, ko je prisotna fizična tipkovnica"
+
+#: src/ui/ms-osk-panel.ui:56
+msgid "Text Completion"
+msgstr "Dokončanje besedila"
+
+#: src/ui/ms-osk-panel.ui:59
+msgid "Opportunistic word completion"
+msgstr "Oportunistično dokončanje besed"
+
+#: src/ui/ms-osk-panel.ui:60
+msgid "Enable word completion when the app indicates it is useful"
+msgstr "Omogoči dokončanja besed, ko aplikacija pokaže, da je uporabna"
+
+#: src/ui/ms-osk-panel.ui:75
+msgid "Toggle via OSK menu"
+msgstr "Preklapljanje prek menija zaslonske tipkovnice"
+
+#: src/ui/ms-osk-panel.ui:76
+msgid "Allow to toggle word completion via the keyboard's menu button"
+msgstr ""
+"Omogočanje preklapljanja med dokončanjem besede z gumbom menija tipkovnice"
+
+#: src/ui/ms-osk-panel.ui:94
+msgid "Terminal Layout"
+msgstr "Postavitev terminala"
+
+#: src/ui/ms-osk-panel.ui:98
+msgid "Shortcuts"
+msgstr "Pokaže tipkovne bližnjice"
+
+#: src/ui/ms-osk-panel.ui:99
+msgid "The shortcuts available in the shortcuts bar"
+msgstr "Bližnjice, ki so na voljo v vrstici z bližnjicami"
+
+#: src/ui/ms-plugin-row.ui:41
+msgid "More options…"
+msgstr "_Dodatne možnosti …"
+
+#: src/ui/ms-plugin-row.ui:54
+msgid "Move Up"
+msgstr "Premakni gor"
+
+#: src/ui/ms-plugin-row.ui:58
+msgid "Move Down"
+msgstr "Premakni dol"
+
+#: src/ui/ms-sensor-panel.ui:16
+msgid "No Sensors found"
+msgstr "Ni najdenih tipal"
+
+#: src/ui/ms-sensor-panel.ui:17
+msgid ""
+"Either there are no sensors installed on your device or they are disabled by "
+"a killswitch."
+msgstr ""
+"Ali v vaši napravi ni nameščenih tipal ali pa jih onemogoči stikalo za "
+"izklop."
+
+#: src/ui/ms-sensor-panel.ui:32
+msgid "Sensor Readings"
+msgstr "Odčitki tipal"
+
+#: src/ui/ms-sensor-panel.ui:40
+msgid "Proximity"
+msgstr "Bližina"
+
+#: src/ui/ms-sensor-panel.ui:49
+msgid "Light"
+msgstr "Svetla"
+
+#: src/ui/ms-sensor-panel.ui:58
+msgid "Orientation"
+msgstr "Usmerjenost"
+
+#: src/ui/ms-sensor-panel.ui:69
+msgid "High Contrast"
+msgstr "Visok kontrast"
+
+#: src/ui/ms-sensor-panel.ui:72
+msgid "Automatic High Contrast"
+msgstr "Samodejni visok kontrast"
+
+#: src/ui/ms-sensor-panel.ui:73
+msgid "Controlled by the Ambient Light Sensor"
+msgstr "Upravlja tipalo okoljske svetlobe"
+
+#: src/ui/ms-sensor-panel.ui:84
+msgid "Light intensity threshold"
+msgstr "Prag intenzivnosti svetlobe"
+
+#: src/ui/ms-sensor-panel.ui:85
+msgid "Theme will switch to high contrast above the threshold"
+msgstr "Tema bo preklopila na visok kontrast nad pragom"
+
+#: src/ui/ms-sound-row.ui:54
+msgid "Sound files (ogg)"
+msgstr "Zvočne datoteke (ogg)"
+
+#: src/ui/ms-topbar-panel.ui:12
+msgid "UI Elements"
+msgstr "Elementi up. vmesnika"
+
+#: src/ui/ms-topbar-panel.ui:16
+msgid "Show battery percentage"
+msgstr "Pokaži polnost baterije"
+
+#: src/ui/ms-topbar-panel.ui:17
+msgid "Show exact charge level in the top bar"
+msgstr "V vrhnji orodni vrstici prikaži natančno raven napolnjenosti."
+
+#: src/ui/ms-topbar-panel.ui:23
+msgid "Avoid notches"
+msgstr "Izogibaj se zarezam"
+
+#: src/ui/ms-topbar-panel.ui:24
+msgid "Don't place UI elements beneath notches and display cutouts"
+msgstr ""
+"Elementov uporabniškega vmesnika ne postavljaj pod zareze in izrezke zaslona"
+
+#: src/ui/ms-topbar-panel.ui:34
+msgid "Quick Settings"
+msgstr "Hitre nastavitve"
+
+#: src/ui/ms-topbar-panel.ui:35
+msgid "Organize your additional Quick Settings"
+msgstr "Organizirajte dodatne hitre nastavite"

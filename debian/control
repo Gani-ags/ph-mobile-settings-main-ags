@@ -1,0 +1,38 @@
+Source: phosh-mobile-settings
+Section: x11
+Priority: optional
+Maintainer: Guido Günther <agx@sigxcpu.org>
+Build-Depends:
+ appstream,
+ debhelper-compat (= 13),
+ desktop-file-utils,
+ libadwaita-1-dev (>= 1.5),
+ libgsound-dev,
+ libgmobile-dev,
+ libgtk-4-dev,
+ libsensors-dev,
+ meson,
+ phosh-dev (>= 0.23.0),
+ feedbackd-common (>= 0.0.4) <!nocheck>,
+ gnome-settings-daemon <!nocheck>,
+ gsettings-desktop-schemas <!nocheck>,
+ phoc <!nocheck>,
+ phosh (>= 0.37.0~) <!nocheck>,
+ xwayland <!nocheck>,
+Standards-Version: 4.6.0
+Homepage: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/
+Rules-Requires-Root: no
+
+Package: phosh-mobile-settings
+Architecture: any
+Depends:
+ feedbackd,
+ phoc (>= 0.34.0~),
+ phosh (>= 0.37.0~),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Breaks:
+ phosh-osk-stub (<< 0.38.0)
+Description: Phosh and related settings for mobile
+ Mobile Settings allows to configure some advanced settings of the Phosh mobile
+ environment that would otherwise involve using the command line.

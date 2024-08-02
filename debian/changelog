@@ -1,0 +1,734 @@
+phosh-mobile-settings (0.40.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * application: Register extension points upfront.
+    Doing it in MsPluginListBox is too late as we only ever init one of the
+    lock screen plugins there meaning that either quick setting or
+  * application: Set translator credits.
+    As we have translations now we should credit translators in about too.
+  * build: Don't use deprecated build_root
+  * build: Bump meson dependency to 1.0
+  * build: Allow to use shared gmobile.
+    Bump dependency to gmobile 0.2.0 while at that.
+  * packaging: Depend on shared gmobile.
+    This unbreaks the nightly builds which don't have gmobile.
+
+  [ Gotam Gorabh ]
+  * debug-info: Use dmi modalias for non DT devices.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/50
+  * debug-info: Add org.gnome.desktop.interface related gsettings.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/53
+  * debug-info: Drop duplicated gsetting
+  * topbar-panel: Allow to set shell layout settings.
+    This would allow to set shell layout settings and allow to disable taking device
+    information into account (e.g. for testing or when the information in
+    gmobile is broken).
+    See https://phosh.mobi/posts/notch-support/ for more information.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/42
+  * plugin-row: Make plugin row draggable.
+    Plugin row already has a menu button to reorder the plugin but making it
+    draggable will enhance the user experience.
+
+  [ Teemu Ikonen ]
+  * lockscreen-panel: Add a SpinRow for 'lock-delay' key.
+    Allow setting the 'lock-delay' key from org.gnome.desktop.screensaver
+    schema with AdwSpinRow.
+    Add the row to 'Locking and unlocking' PreferencesGroup, renamed from
+    'Unlocking'.
+
+  [ Scrambled 777 ]
+  * Update Hindi translation
+
+  [ Jiri Grönroos ]
+  * Add Finnish translation
+
+  [ Jordi Mas i Hernandez ]
+  * Add Catalan translation
+
+  [ Artur S0 ]
+  * Update Russian translation
+
+  [ Daniel Rusek ]
+  * Update Czech translation
+
+  [ Yuri Chornoivan ]
+  * Update Ukrainian translation
+
+  [ Martin ]
+  * Update Slovenian translation
+
+  [ Ekaterine Papava ]
+  * Update Georgian translation
+
+  [ Danial Behzadi ]
+  * Update Persian translation
+
+  [ Yosef Or Boczko ]
+  * Update Hebrew translation
+
+  [ Anders Jonsson ]
+  * Update Swedish translation
+
+  [ Yaron Shahrabani ]
+  * Update Hebrew translation
+
+  [ Antonio Marin ]
+  * Update Romanian translation
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 29 Jun 2024 09:41:59 +0200
+
+phosh-mobile-settings (0.39.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * tests: Don't fail if phoc is missing.
+    There's already a block to skip the tests when phoc is missing but until
+    now `meson setup` aborted when phoc isn't found.
+    This unbreaks the nightly builds:
+    https://source.puri.sm/guido.gunther/phosh-debs/-/jobs/432243
+    Fixes: 363d074 ("tests: Add tests for local options")
+  * librem5-panel: Mark strings as translatable
+  * packaging: Add breaks against old phosh-osk-stub.
+    We want at least 0.37.0 to have the ignore-hw-keyboards key
+  * osk-panel: Allow to ignore hardware keyboards.
+    This allows to always show the OSK, even when a hardware keyboard is
+    present.
+  * ci: Update common function and use template job.
+    Use meta-phosh as of f3c92e90dcc0d65322888217429b75dd101bd0d3
+    This allows us to drop our check-po variant and to use the
+    common style check.
+  * packaging: Bump phosh dependency.
+    We need 0.37.0 for the Quick Setting gsettings schema
+  * plugin-list-box: Add widget that manages phosh plugins.
+    This is based on the implementation in the lock screen panel.
+  * lockscreen-panel: Use plugin-list-box
+  * topbar-panel: Allow to configure additional quick settings.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/46
+  * Revert "ci: Use sid at the moment"
+    This reverts commit b537e288b04793dfced613d06a46974b2d93be0c.
+    Phosh 0.38.0 is now in testing.
+  * ci: Use common before step
+  * ci: Use newer image.
+    This will fix gcovr failing to do anything. See
+      https://gitlab.gnome.org/guidog/phosh-osk-stub/-/merge_requests/136
+
+  [ Gotam Gorabh ]
+  * topbar-panel: Create a new empty top bar panel.
+    Top bar panel will contains settings related to shell or top-bar.
+
+  [ Vladimir Vaskov ]
+  * applications-panel: Mark UI strings as translatable
+  * features-panel: Mark UI strings as translatable
+  * po: Remove main. It has no translatable strings
+  * po: Add a Russian translation
+
+  [ Danial Behzadi ]
+  * Add Persian translation
+
+  [ Andika Triwidada ]
+  * Add Indonesian translation
+
+  [ Yuri Chornoivan ]
+  * Add Ukrainian translation
+
+  [ Ekaterine Papava ]
+  * Add Georgian translation
+
+  [ Daniel Rusek ]
+  * Add Czech translation
+
+  [ Artur S0 ]
+  * Update Russian translation
+
+  [ Sabri Ünal ]
+  * Add Turkish translation
+
+  [ Martin ]
+  * Add Slovenian translation
+
+  [ Daniel Șerbănescu ]
+  * Add Romanian translation
+
+  [ Anders Jonsson ]
+  * Add Swedish translation
+
+  [ Andi Chandler ]
+  * Add British English translation
+
+  [ Yaron Shahrabani ]
+  * Add Hebrew translation
+
+  [ Scrambled 777 ]
+  * Add Hindi translation
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 06 May 2024 20:06:11 +0200
+
+phosh-mobile-settings (0.38.0) experimental; urgency=medium
+
+  [ Rudra Pratap Singh ]
+  * packaging: Add tests dependencies.
+    We need a compositor and apart from that the schemas that p-m-s deals
+    with.
+  * application: Use imperative form in -l option
+  * application: Assert presence of Wayland protocols.
+    Since we always run under Wayland, we should
+    always have access to protocols.
+  * application: Add local option to print debug info
+  * tests: Add tests for local options
+  * ci: Add a job for running tests
+
+  [ Guido Günther ]
+  * osk-panel: Don't print warning when we fail to get the osk PID.
+    Otherwise this trips up the tests and it's not crucuial for the panel to
+    function.
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 02 Apr 2024 19:52:49 +0200
+
+phosh-mobile-settings (0.37.0) experimental; urgency=medium
+
+  [ Gotam Gorabh ]
+  * sound-row: Fix transform function name typo
+  * sound-row: Add playing property to update icon of playback button
+  * feedback-panel: Display proper error message.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/40
+  * feedback-panel: Sync playing state between each sound row
+  * application-panel: Allow to set app filter mode settings.
+    This changes will allow user to enable/disable app-filter-mode via p-m-s.
+    closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/1
+  * application-panel: Make title and subtitle translatable
+
+  [ Rudra Pratap Singh ]
+  * application: Add local option to output version
+  * applications-panel: Reword Favorites row title
+  * applications-panel: Make favorites flowbox homogeneous.
+    This will ensure each added favorite within the
+    flowbox occupies same size, irrespective of
+    the number of favorites.
+  * applications-panel: Allow to append a favorite via flowbox.
+    With this, a favorite can be dropped on the
+    flowbox which will be appended at the end.
+
+  [ Guido Günther ]
+  * lockscreen-panel: Only show lockscreen plugins.
+    With more plugin types coming to phosh via
+    https://gitlab.gnome.org/World/Phosh/phosh/-/merge_requests/1359
+    we want to make sure we only list the plugins with a "lockscreen"
+    type here.
+    For a transition phase we assume that no type means "lockscreen".  This
+    can be dropped in the future.
+  * application-panel: String consistency.
+    Use imperative form, unify spelling.
+  * ci: Switch ci back to Debian Trixie.
+    We have libadwaita 1.4 and Debian sid is going through a larger
+    library transition atm.
+  * packaging: Allow to fetch subprojects.
+    This unbreaks the package build
+  * gmobile: Update to 0.0.6. Go with the flow.
+  * packaging: Depend on libjson-glib-dev.
+    This prevents that it's pulled as a subproject by gmobile
+  * packaging: Improve installation.
+    Don't override the install target so e.g. missing files are correctly
+    detected.
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 29 Feb 2024 17:20:41 +0100
+
+phosh-mobile-settings (0.36.0) experimental; urgency=medium
+
+  [ Suraj Kumar Mahto ]
+  * apps-panel: Add application panel skeleton
+
+  [ pseudorandom-x ]
+  * apps-panel: Add ability to reset favorited apps.
+    Allows users to set the favorites back to
+    vendor defaults.
+  * apps-panel: Add ability to rearrange favorited apps.
+    Allows users to drag-n-drop favorited apps to
+    rearrange them.
+    Closes: https://gitlab.gnome.org/guidog/phosh-mobile-settings/-/issues/3
+  * build: Bump minimum GTK required to ver 4.12.5
+  * application: Drop flags argument in mobile_settings_application_new ()
+  * application: Add getter method for active window
+  * application: Override handle_local_options vfunc.
+    This will allow for handling some options locally
+    (e.g., --version) efficiently by registering
+    array of accepted options.
+  * settings-window: Extend API to access stack pages.
+    Adds a getter method to access the pages of
+    GtkStack object
+  * application: Add local option to list panels.
+    Adds the `--list` local option to list the
+    available panels.
+  * settings-window: Bind MsPanelSwitcher template object
+  * settings-window: Extend API to access MsPanelSwitcher object
+  * panel-switcher: Extend API to activate panel by name
+  * application: Add ability to launch a specific panel.
+    Allows the application to be launched with
+    the specified panel activated if found.
+
+  [ Guido Günther ]
+  * ci: Drop an unused remote.
+    We don't use it and it just causes failures when the remote is
+    unavailable.
+  * window: Set log domain
+  * applications-panel: Remove trailing whitespace
+  * packaging: Require recent phoc.
+    This is needed to make touch DnD work
+  * applications: Disable favorite arrangement with too old GTK.
+    The code to organize favorites needs DnD on touch. This was only fixed
+    recently in phoc 0.34.0~beta1:
+      384d755f ("cursor: Don't forget to update the drag icons position")
+    and GTK 4.13.2:
+      d78475372f ("gtk: Obey GTK grabs on DnD events")
+    So disable that part of the panel when GTK is too old.
+  * debug-info: Use a single line for the OS.
+    This will make it simpler to use the pretty name.
+  * debug-info: Move os info gathering to separate function.
+    This will allow us to make it more complex.
+  * debug-info: Try harder to get usable OS information.
+    On Debian the testing/sid the OS version is NULL. Try pretty name too to
+    make that useful.
+  * packaging: Require newer phosh
+  * osk: Allow to set the unfold delay
+  * l5-panel: Init temperatures.
+    This ensures they don't contain garbage in case sensors_get_value()
+    doen't set them.
+  * application: Don't use self for GApplication
+    self refers to an object of type PhoshMobileSettingsApplication not
+    GApplication. Adjust the variable names in functions that did this
+    differently. This makes it obvious where casts are needed.
+    While at that fix an overly long line by introducing a variable.
+    Fixes: 6f40214 ("application: Override handle_local_options vfunc") and
+           related commits.
+  * metainfo: Set developers
+
+  [ Teemu Ikonen ]
+  * feedback-panel: Use correct schema id for feedbackd.
+
+  [ swaroopanand ]
+  * application: Generate about page from meta info.
+    Generate the about page using adw_about_window_new_from_appdata.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/43
+
+  [ Rodney Lorrimar ]
+  * build: Don't compile gesettings schemas.
+    We don't ship any schemas and `glib-compile-schemas` fails if the
+    target directory doesn't exist.
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 03 Feb 2024 13:25:23 +0100
+
+phosh-mobile-settings (0.35.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * osk-panel: Use a list model.
+    This separates shortcut maintenance from the visual representation.
+  * osk-panel: Allow to sort terminal shortcuts via d'n'd
+  * treewide: Update repository location.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/5
+  * README: Fix broken links.
+    The were 404 before and hence search and replace missed them too.
+  * Multiple leak fixes
+  * Add doap file. Welcome Gotam as maintainer while at that.
+  * build: Use GLIB_VERSION_{MIN_REQURED,MAX_ALLOWED}
+    We had the version string but weren't using it.
+  * build: Bump glib version.
+    We were using 'G_APPLICATION_DEFAULT_FLAGS' already
+  * build: Use GDK_VERSION_{MIN_REQURED,MAX_ALLOWED}
+    We use the same pattern as with glib
+  * sound-row: Drop G_GNUC_END_IGNORE_DEPRECATIONS.
+    Not needed as we specify a GTK version
+  * sound-row: Swith to GtkFileDialog.
+    This makes us use the portal and hence we get an adaptive file dialog in
+    most distros.
+    We bump the required GTK version for 4.12 to that. We require 4.12
+    implicitly anyway due to libadwaita 1.4.
+  * build: Use ADW_VERSION_{MIN_REQURED,MAX_ALLOWED}
+    Be consistent with how we handle glib and gtk.
+  * ci: Remove duplicate style-check
+  * po: Add ms-plugin-row.ui.
+    Fixes: 7721528 ("Allow to enable and disable lockscreen plugins")
+  * tools: Add check-po.
+    Taken from phosh as of c61a960bc451907f7d28dbf6e5e773e4d2cdcce2
+  * ci: Check if we have all translatable files listed
+  * ci: Add ci-fairy rules.
+    Use the ones from Phosh as of 7fb92f43992ab9e20e6d231ca537a9e7ce687ea0
+  * Untabify ui files
+
+  [ Alexandre Iooss ]
+  * po: Delete reference to previously deleted schema file.
+    Fixes: b256841 ("data: Remove unused schema")`
+  * ui: remove extra colon
+  * Add po/fr.po
+
+  [ Gotam Gorabh ]
+  * feedback-panel: Fix toast messages.
+    User should know the current status of playing sound via toast messages.
+    Helps: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/40
+  * sound-row: Add tooltip-text to playback button
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 01 Jan 2024 10:14:26 +0100
+
+phosh-mobile-settings (0.34.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * ci: Switch to trixie
+  * ci: Add uncrustify config and checker.
+  * ci: Run style checks on merge requests.
+
+  [ Gotam Gorabh ]
+  * debug-info: Add some gsettings to the Troubleshooting tab.
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 29 Nov 2023 10:13:50 +0100
+
+phosh-mobile-settings (0.33.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * data: Remove unused schema
+  * gmobile: Switch to 0.0.3.
+    Also move to the canonical upstream repo location
+  * treewide: Move to mobi.phosh prefix
+  * resources: Add the application icon.
+    This makes sure it's found even when the app is not installed
+    (e.g. when running from the source tree)
+  * metainfo: Add replaces for old app-id
+  * application: Don't forget to dup the data.
+    We return a GStrv so we need to duplicate the data added to the GStrv as
+    we'd otherwise free the data of the strings in the hash map.
+    Fixes: 3cea964a43db75645f6970c3c7a0782679b16f62
+  * build: Require newer glib.
+    This allows us to e.g. use g_strv_builder and we need newer libadwaita
+    anyway already.
+  * application: Use g_strv_builder.
+    More failsafe than using a g_ptr_array.
+  * compositor-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+  * features-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+  * osk-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+  * sensors-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+  * convergence-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+
+  [ Gotam Gorabh ]
+  * debug-info: Troubleshooting tab enhancements.
+
+  [ Abhijith PA ]
+  * feedback-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+  * lockscreen-panel: Drop unneeded clamp.
+    This avoids having the scroll bar in the middle of the window
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 28 Oct 2023 18:02:33 +0200
+
+phosh-mobile-settings (0.32.0) experimental; urgency=medium
+
+  [ Gotam Gorabh ]
+  * window: Switch to AdwNavigationSplitView.
+    AdwLeaflet will be deprecated in libadwaita 1.4
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/33
+  * build: Add libadwaita as subproject
+  * lockscreen-panel: Make plugin order match listbox order.
+  * lockscreen-panel: Allow to reorder the plugins.
+    For that add a popover with "move up" and "move down" buttons to each
+    plugin row.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/17
+
+  [ Guido Günther ]
+  * lockscreen-panel: Log prefs state too. Simplify debugging a bit
+  * plugin-row: Don't insert actions twice.
+    This unbreaks setting the plugin prefs
+    Fixes: b5ed64cc841d64be26731e6f4e39e091df28163b
+  * feedback-panel: Move flag getting and setting closer together
+  * feedback-panel: Don't overwrite a disabled wakeup trigger.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/34
+  * window: Set a title. This avoids a warning when switching tabs.
+  * gitignore subprojects
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 02 Oct 2023 14:34:17 +0200
+
+phosh-mobile-settings (0.31.0) experimental; urgency=medium
+
+  [ Arun Mani J ]
+  * Add run script to launch p-m-s from the source tree.
+
+  [ Guido Günther ]
+  * Add gmobile as subproject
+  * debug-info: Add device tree information
+  * mobile-settings-application: Add finalize
+  * debug-info: Add versions of all wayland protocols
+  * convergence-panel: Fix EDID information for NexDock 360.
+    With wlroots 0.16 we get the correct vendor.
+  * d/control: Bump phoc dependency.
+
+  [ Suraj Kumar Mahto ]
+  * feedback-panel: add option to select which type of notification urgency
+    light up the screen
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 29 Aug 2023 12:31:11 +0200
+
+phosh-mobile-settings (0.30.0) experimental; urgency=medium
+
+  [ Gotam Gorabh ]
+  * Add Troubleshooting Tab.
+    These changes will add a troubleshooting tab in posh-mobile-settings.
+    This troubleshooting tab will contain debug information required
+    while reporting issues against this application.
+    Fixes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/30
+
+  [ Guido Günther ]
+  * debug-info: Allow to build with glib < 2.76.0
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 31 Jul 2023 12:03:51 +0200
+
+phosh-mobile-settings (0.29.0) experimental; urgency=medium
+
+  [ Evangelos Ribeiro Tzaras ]
+  * panel-switcher: Fix indentation
+  * Add sensor panel.
+    Shows sensor readings and allows setting automatic high contrast and
+    the associated sensor threshold. Sensors get claimed only when the
+    panel is mapped (and released if unmapped).
+  * settings-window: Add sensor panel
+
+  [ undef ]
+  * d/control: depend on Phosh 0.29 with new gsettings schema.
+  * features-panel: Add manual suspend switch to experimental settings.
+    This enables configuring the Phosh suspend button in the system menu.
+
+  [ Guido Günther ]
+  * features-panel: Add to translatable files
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 02 Jul 2023 17:28:39 +0200
+
+phosh-mobile-settings (0.28.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * ms-sound-row: Add a hint which sound files are supported.  We currently
+    look for *.ogg.
+  * metainfo: Fix release date of 0.23.1
+  * packaging: Add phosh dependency.
+    We'll need phosh's gsetting schema for the features panel
+  * Add panel for experimental features.
+    This panel is meant for features that will be enabled by default in the
+    future. For now we put the emergency call support there.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/25
+
+  [ Sam Hewitt ]
+  * Fix issue with invisible element in app icon
+
+  [ Evangelos Ribeiro Tzaras ]
+  * osk-panel: Bail early when there is no on screen keyboard.
+    When p-m-s is run without on screen keyboard
+    (e.g. not under a phosh session)
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 31 May 2023 16:31:13 +0200
+
+phosh-mobile-settings (0.27.0) experimental; urgency=medium
+
+  * metainfo: Add recent release
+  * feedback-panel: Avoid deprecated gtk_style_context_add_class
+  * plugins: Avoid deprecated gtk_style_context_add_class
+  * gitignore: Add generated files in po
+  * d/control: Add libsound-dev
+  * po: Add ms-osk-sound-panel.
+    Fixes 8ad8781938585fa0b09c13cf2a0268276888ba9d
+  * Allow to configure ring tone and sms sounds
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 30 Apr 2023 14:36:11 +0200
+
+phosh-mobile-settings (0.26.0) experimental; urgency=medium
+
+  * panels: Use AdwPreferences page.
+    This makes sure we get the styling applied correctly.
+    Closes: https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/issues/24
+  * convergence-panel: Drop superfluous GtkListBox
+  * plugins: Avoid adw_action_row_set_icon_name.
+    Deprecated since Adwaita 1.3
+  * Avoid GTK 4.10 deprecations.  For now just disable them until
+    we can require a more recent GTK.
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 28 Mar 2023 11:10:33 +0200
+
+phosh-mobile-settings (0.25.0) experimental; urgency=medium
+
+  [ Evangelos Ribeiro Tzaras ]
+  * build: Bump glib dependency to 2.66.
+    Fixes c31f81f3476ac9903916c105ac01aa1594067bc5
+  * build: Bump meson dependency to 0.58.0
+    str.replace() (used for glib_ver_str) is only available since 0.58.
+
+  [ Guido Günther ]
+  * window: Use a larger default size.
+    This makes things less fiddly on larger screens
+  * gitignore: Ignore generated pot file
+  * build: Fix gettext name.
+    This allows translations to be found
+  * feedback-panel: Separate feedback settings from setting their labels.
+    We want the labels to be translatable while the stings uses for
+    settings should be untranslated.
+  * po: Translate some DE strings.
+    This allows to test i18n.
+  * Add osk panel.
+    This allows to toggle OSK usage on and off and (if phosh-osk-stub is
+    used) to configure the word completion mode.
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 28 Feb 2023 11:10:32 +0100
+
+phosh-mobile-settings (0.24.1) experimental; urgency=medium
+
+  * plugins-row: Use full path to open prefs plugin
+  * lockscreen-panel: Mention in error message that it's a prefs plugin.
+    This makes it simpler to distinguish lockscreen plugin and prefs
+    plugin info load failures
+  * NEWS: fix typo
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 13 Feb 2023 11:07:15 +0100
+
+phosh-mobile-settings (0.24.0) experimental; urgency=medium
+
+  [ Andrey Skvortsov ]
+  * lockscreen-panel: Make panel scrollable.
+    It's necessary epsecially in landscape orientation
+
+  [ Guido Günther ]
+  * lockscreen-panels: Drop plugins that start with '/'
+    This clears out plugins that were accidentally added with the full path.
+    Fixes: 26b2f1c88f3dc9078d24df43167761dc1e01c632
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 30 Jan 2023 17:06:49 +0100
+
+phosh-mobile-settings (0.23.1) experimental; urgency=medium
+
+  * metainfo: Add releases
+  * metainfo: Drop Purism::form_factor.
+    The duplicate key (rightfully) tips up metainfo validation
+    and we also have `display_length` set as well.
+  * Revert "build: Make phosh-dev dependency optional for the moment"
+    There's now a release shipping the pkg-config files so let's drop this
+    to avoid inconistencies between builds that use pkg-config and those
+    that use hardcoded paths.
+  * ms-plugin-row: Don't overwrite plugin name with file name.
+    (Fixes: #22)
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 04 Jan 2023 11:39:29 +0100
+
+phosh-mobile-settings (0.23.0) experimental; urgency=medium
+
+  * main: Use SPDX-License-Identifier
+  * application: Fix parent class
+  * build: Avoid deprecated get_pkgconfig_variable
+  * build: Bump glib dependency to 2.66
+  * README: Use meson consistently
+  * build: Use meson's version_compare.
+    This avoids a warning as meson now knows we're excluding
+    code base on it's version
+  * build: Depend on phosh-plugins
+  * plugin-panel: Fix typo
+  * lockscreen-panel: Fix typo
+  * lockscreen-panel: Allow plugins to have preferences
+  * build: Make phosh-dev dependency optional for the moment.
+    This allows us to build until phosh-dev ends up in distros.
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 23 Dec 2022 15:02:55 +0100
+
+phosh-mobile-settings (0.22.0) experimental; urgency=medium
+
+  * l5-panel: Don't forget to bind the suspend button.
+    Otherwise we can't make it (un)sensitive
+  * window: Don't forward to welcome page.
+    This createes unneeded flicker and adds one additional tap
+    every use to go back to the panel.
+  * window: Move device panel addition to constructed.
+    As pointed out by exalm doing this in realize is a bad idea.
+    We had it there as we wanted to access GApplication but that wasn't set
+    as prop yet but we can simply use g_application_get_default()
+  * main: Use G_APPLICATION_DEFAULT_FLAGS to avoid depreation warning.
+    Provide a fallback for older glib until we can enforce 2.74.
+  * build: Add and use app id
+  * app: Use AdwAboutDialog.
+    In contrast to GtkAboutDialog it's adaptive and fits phone screens.
+    For that we need to bump the adwaita dependency to 1.2.
+  * l5-panel: Don't forget to bind the suspend button.
+    Otherwise we can't make it (un)sensitive
+  * window: Don't forward to welcome page.
+    This createes unneeded flicker and adds one additional tap
+    every use to go back to the panel.
+  * window: Move device panel addition to constructed.
+    As pointed out by exalm doing this in realize is a bad idea.
+    We had it there as we wanted to access GApplication but that wasn't set
+    as prop yet but we can simply use g_application_get_default()
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 02 Nov 2022 11:18:16 +0100
+
+phosh-mobile-settings (0.21.1) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * ms-convergence-panel: Explain how to fetch the values for adding new docks
+  * Revert "lockscreen-panel: Mark additional widgets as experimental"
+    This currently makes the window overflow (although it should be word
+    wrapped)
+
+  [ Kyle Rankin ]
+  * Add support for UPERFECT X Mini lapdock.
+    This adds convergence panel support for the UPERFECT X Mini lapdock:
+    https://www.uperfectmonitor.com/products/uperfect-x-mini-lapdock-11-6
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 25 Sep 2022 12:53:07 +0200
+
+phosh-mobile-settings (0.21.0) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * ci: Use newer Debian Bookworm image.
+    This lets the builds pass again.
+  * build: Plugin uses gio bits.
+    Add a proper dependency
+  * data: Update the appstream release information
+  * Move plugins to phosh-mobile-settings/ folder
+  * Allow to enable and disable lockscreen plugins (Closes: #12)
+  * lockscreen-panel: Use plugin info.
+    Don't just rely on the plugin path but rather parse the available
+    information so we can have translated descriptions, etc.
+  * lockscreen-panel: Don't try to read from inexistent dir
+  * lockscreen-panel: Mark additional widgets as experimental
+
+  [ Sebastian Krzyszkowiak ]
+  * librem5-plugin: Adjust sensor mappings for temperatures.
+    On the Librem 5, bq25890_charger driver reports the temperature
+    as monitored by the thermisor inside the battery, while the
+    max170xx_battery driver reports the internal temperature of
+    the fuel gauge chip. Adjust sensor descriptions to match that.
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 31 Aug 2022 10:01:14 +0200
+
+phosh-mobile-settings (0.20.0) experimental; urgency=medium
+
+  * Release 0.20.0
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 08 Aug 2022 10:48:26 +0200
+
+phosh-mobile-settings (0.20.0~beta1) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * scale-to-fit-row: Use the correct cleanup function.
+    This fixes a crash when closing the application.
+  * settings-window: Print page title when folded
+  * compositor-panel: Make it more obvious that scale-to-fit is a workaround.
+  * compositor-panel: Use g_debug.
+  * ui: Use application icon on welcome page
+  * desktop-file: Only show in Phosh.
+  * desktop-file: Add translator notes
+  * po: Add translatable files
+  * application: Make about dialog more useful
+  * Ease configuration for touch mappings with known docks
+  * librem5-plugin: Add suspend button
+
+  [ Sam Hewitt ]
+  * New app icon
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 04 Jul 2022 16:47:35 +0200
+
+phosh-mobile-settings (0.0.1) experimental; urgency=medium
+
+  * Initial release
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 15 Jun 2022 17:28:21 +0200

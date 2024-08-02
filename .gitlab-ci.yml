@@ -1,0 +1,168 @@
+# include:
+#  - project: 'guidog/meta-phosh'
+#    ref: '4c3435286f832cfa1e2903283e8741eb81d05dcd'
+#    file: '/ci/phosh-common-jobs.yml'
+#  - remote: 'https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/34039cd573a2df832d465bc9e4c5f543571f5241/templates/ci-fairy.yml'
+
+# stages:
+#  - build
+#  - test
+#  - style-checks
+
+# default:
+#   # Protect CI infra from rogue jobs
+#   timeout: 15 minutes
+#   # Allow jobs to be caneled on new commits
+#   interruptible: true
+#   # Retry on infra hickups automatically
+#   retry:
+#     max: 1
+#     when:
+#       - 'api_failure'
+#       - 'runner_system_failure'
+#       - 'scheduler_failure'
+#       - 'stuck_or_timeout_failure'
+
+# workflow:
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+#     # Don't trigger a branch pipeline if there is an open MR
+#     - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+#       when: never
+#     - if: $CI_COMMIT_TAG
+#     - if: $CI_COMMIT_BRANCH
+
+# variables:
+#   # For ci-fairy
+#   FDO_UPSTREAM_REPO: World/Phosh/phosh-mobile-settings
+#   DEBIAN_IMAGE: $CI_REGISTRY/guidog/phosh-osk-stub/debian:v0.0.2024-05-03
+#   COMMON_BUILD_OPTS: --werror -Db_coverage=true
+
+# .trixie_vars: &trixie_vars
+#   variables:
+#     DIST: trixie
+#     BUILD_OPTS:  ${COMMON_BUILD_OPTS}
+
+# .build_step: &build_step
+#   script:
+#     - 'echo "Build opts: ${BUILD_OPTS}"'
+#     - meson ${BUILD_OPTS} . _build
+#     - meson compile -C _build
+
+# .test_step: &test_step
+#   script:
+#     - dbus-run-session meson test --print-errorlogs -C _build
+#     - ninja -C _build coverage-html
+
+# .before: &before
+#   before_script:
+#     - apt-get -y update
+#     - apt-get -y build-dep .
+
+# # Sanity checks of MR settings and commit logs
+# sanity:
+#   extends:
+#     - .fdo.ci-fairy
+#   stage: style-checks
+#   variables:
+#     GIT_DEPTH: "100"
+#   script: |
+#     ci-fairy check-commits --junit-xml=commit-message-junit-report.xml cifairy/main..HEAD ;
+#   artifacts:
+#     reports:
+#       junit: commit-message-junit-report.xml
+#   rules:
+#     - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME'
+
+# build:native-debian-trixie:
+#   stage: build
+#   image: ${DEBIAN_IMAGE}
+#   <<: *before
+#   <<: *trixie_vars
+#   <<: *build_step
+#   artifacts:
+#     paths:
+#       - _build
+
+# test:native-debian-trixie:
+#   stage: test
+#   image: ${DEBIAN_IMAGE}
+#   needs:
+#     - build:native-debian-trixie
+#   <<: *before
+#   <<: *trixie_vars
+#   <<: *test_step
+#   coverage: '/^lines:\s+([\d.]+\%)\s+/'
+#   artifacts:
+#     when: always
+#     reports:
+#       junit: _build/meson-logs/testlog.junit.xml
+#   except:
+#     variables:
+#       - $PKG_ONLY == '1'
+
+# check-po:
+#   stage: test
+#   extends: .phosh-check-po
+#   except:
+#     variables:
+#       - $PKG_ONLY == "1"
+
+# check-consistency:
+#   stage: test
+#   extends: .phosh-check-consistency
+#   except:
+#     variables:
+#       - $PKG_ONLY == "1"
+
+# format-check:
+#   stage: style-checks
+#   extends: .phosh-format-check
+#   allow_failure: true
+
+# Sonarcube config
+image: gcc
+
+variables:
+  SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+  GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+
+get-sonar-binaries:
+  stage: .pre
+  cache:
+    policy: push
+    key: "${CI_COMMIT_SHORT_SHA}"
+    paths:
+      - build-wrapper/
+      - sonar-scanner/
+  script:
+    # Download sonar-scanner
+    - curl -sSLo ./sonar-scanner.zip 'https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-6.1.0.4477-linux-x64.zip'
+    - unzip -o sonar-scanner.zip
+    - mv sonar-scanner-6.1.0.4477-linux-x64 sonar-scanner
+    # Download build-wrapper
+    - curl -sSLo ./build-wrapper-linux-x86.zip "${SONAR_HOST_URL}/static/cpp/build-wrapper-linux-x86.zip"
+    - unzip -oj build-wrapper-linux-x86.zip -d ./build-wrapper
+  only:
+    - merge_requests
+    - master
+    - develop
+
+build:
+  stage: build
+  cache:
+    policy: pull-push
+    key: "${CI_COMMIT_SHORT_SHA}"
+    paths:
+      - build-wrapper/
+      - sonar-scanner/
+  script:
+    # Run the build inside the build wrapper
+    - meson setup build-wrapper
+    - build-wrapper/build-wrapper-linux-x86-64 --out-dir bw-output meson compile -C build-wrapper
+    # Run the sonar-scanner in the same stage as the build
+    - sonar-scanner/bin/sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.token="${SONAR_TOKEN}" -Dsonar.cfamily.compile-commands=bw-output/compile_commands.json
+  only:
+    - merge_requests
+    - master
+    - develop

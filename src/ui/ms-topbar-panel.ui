@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="MsTopbarPanel" parent="AdwBin">
+    <child>
+      <object class="GtkScrolledWindow">
+        <child>
+          <object class="AdwPreferencesPage">
+
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes">UI Elements</property>
+
+                <child>
+                  <object class="AdwSwitchRow" id="battery_percentage_switch">
+                    <property name="title" translatable="yes">Show battery percentage</property>
+                    <property name="subtitle" translatable="yes">Show exact charge level in the top bar</property>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="AdwSwitchRow" id="shell_layout_switch">
+                    <property name="title" translatable="yes">Avoid notches</property>
+                    <property name="subtitle" translatable="yes">Don't place UI elements beneath notches and display cutouts</property>
+                    <signal name="notify::active" handler="shell_layout_switch_row_cb" object="MsTopbarPanel" swapped="yes"/>
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes">Quick Settings</property>
+                <property name="description" translatable="yes">Organize your additional Quick Settings</property>
+                <child>
+                  <object class="MsPluginListBox" id="plugins_listbox">
+                    <property name="plugin-type">quick-setting</property>
+                    <property name="settings-key">quick-settings</property>
+                    <property name="prefs-extension-point">phosh-quick-setting-widget-prefs</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

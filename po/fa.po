@@ -1,0 +1,616 @@
+# Persian translation for phosh-mobile-settings.
+# Copyright (C) 2024 phosh-mobile-settings's COPYRIGHT HOLDER
+# This file is distributed under the same license as the phosh-mobile-settings package.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: phosh-mobile-settings main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Phosh/phosh-mobile-"
+"settings/-/issues\n"
+"POT-Creation-Date: 2024-07-06 13:38+0000\n"
+"PO-Revision-Date: 2024-07-09 17:53+0330\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: data/mobi.phosh.MobileSettings.desktop.in:3 src/ui/mobile-settings-window.ui:6
+msgid "Mobile Settings"
+msgstr "تنظیمات همراه"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/mobi.phosh.MobileSettings.desktop.in:12
+msgid "Mobile;Preferences;MobileSettings;"
+msgstr "Mobile;Preferences;MobileSettings;موبایل;همراه;تلفن;ترجیحات;"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:4
+msgid "Phosh Mobile Settings"
+msgstr "تنظیمات همراه فوش"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:8
+msgid ""
+"This app allows you to configure some aspects of Phosh that would otherwise "
+"require command line usage."
+msgstr ""
+"این کاره می‌گذارد برخی جنبه‌های فوش را پیکربندی کنید که در غیر این صورت باید از "
+"خط فرمان استفاده می‌کردید."
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:13
+msgid "Advanced settings for Mobile devices using Phosh"
+msgstr "تنظیمات پیش‌رفته برای افزاره‌های همراه که از فوش استفاده می‌کنند"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:40
+msgid "Available panels"
+msgstr "تابلوهای موجود"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:44
+msgid "Compositor panel"
+msgstr "تابلوی ترکیبکر"
+
+#: data/mobi.phosh.MobileSettings.metainfo.xml.in:48
+msgid "Feedback panel"
+msgstr "تابلوی بازخورد"
+
+#: plugins/librem5/ms-plugin-librem5-panel.c:214
+#, c-format
+msgid "Critical temperature is %.2f°C"
+msgstr "دمای بحرانی ‪%I.2f°C‬ است"
+
+#. translators: U-boot is the brand of a bootloader
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:19
+msgid "U-Boot"
+msgstr "یو-بوت"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:31
+msgid "Suspend device"
+msgstr "تعلیق افزاره"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:33
+msgid "Suspend is experimental"
+msgstr "تعلیق آزمایشیست"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:51
+msgid "Temperatures"
+msgstr "دماها"
+
+#. translators: The central processing unit of a smart phone
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:55
+msgid "CPU"
+msgstr "پردازنده"
+
+#. translators: The graphics processing unit of a smart phone
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:74
+msgid "GPU"
+msgstr "شتاب‌دهندهٔ گرافیکی"
+
+#. translators: The video processing unit of a smart phone
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:93
+msgid "VPU"
+msgstr "پردازشگر ویدیویی"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:111
+msgid "Fuel Gauge"
+msgstr "عقربهٔ سوخت"
+
+#: plugins/librem5/ui/ms-plugin-librem5-panel.ui:129
+msgid "Battery"
+msgstr "باتری"
+
+#: src/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "عمومی"
+
+#: src/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "نمایش میان‌برها"
+
+#: src/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "خروج"
+
+#: src/mobile-settings-application.c:30
+msgid "- Manage your mobile settings"
+msgstr "- مدیریت تنظیمات همراهتان"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/mobile-settings-application.c:392
+msgid "translator-credits"
+msgstr "دانیال بهزادی <dani.behzi@ubuntu.com>"
+
+#: src/mobile-settings-window.c:77
+msgid "Device"
+msgstr "افزاره"
+
+#: src/ms-feedback-panel.c:137
+msgid "Sound file does not exist"
+msgstr "پروندهٔ صدا وجود ندارد"
+
+#: src/ms-feedback-panel.c:139
+msgid "Sound file is corrupt"
+msgstr "پروندهٔ صدا خراب است"
+
+#: src/ms-feedback-panel.c:141
+msgid "Failed to play sound"
+msgstr "شکست در پخش صد"
+
+#: src/ms-feedback-panel.c:180
+#, c-format
+msgid "Playing %s"
+msgstr "پخش کردن %s"
+
+#: src/ms-feedback-panel.c:341 src/ms-feedback-panel.c:349
+msgid "none"
+msgstr "هیچ"
+
+#: src/ms-feedback-panel.c:343
+msgid "low"
+msgstr "کم"
+
+#. 1.0
+#: src/ms-feedback-panel.c:345 src/ui/ms-osk-panel.ui:36
+msgid "normal"
+msgstr "معمولی"
+
+#: src/ms-feedback-panel.c:347
+msgid "critical"
+msgstr "بحرانی"
+
+#: src/ms-sensor-panel.c:92
+msgid "Normal"
+msgstr "معمولی"
+
+#: src/ms-sensor-panel.c:94
+msgid "Bottom up"
+msgstr "پایین بالا"
+
+#: src/ms-sensor-panel.c:96
+msgid "Left up"
+msgstr "چپ بالا"
+
+#: src/ms-sensor-panel.c:98
+msgid "Right up"
+msgstr "راست بالا"
+
+#: src/ms-sensor-panel.c:100
+msgid "Undefined"
+msgstr "تعریف نشده"
+
+#: src/ms-sensor-panel.c:135
+msgid "Near"
+msgstr "نزدیک"
+
+#: src/ms-sensor-panel.c:135
+msgid "Far"
+msgstr "دور"
+
+#: src/ms-sensor-panel.c:253
+msgid "Updating…"
+msgstr "در حال به‌روز رسانی…"
+
+#: src/ms-sensor-panel.c:269 src/ms-sensor-panel.c:270 src/ms-sensor-panel.c:271
+msgid "Not available"
+msgstr "در دسترس نیست"
+
+#: src/ms-sound-row.c:127
+msgid "Custom"
+msgstr "سفارشی"
+
+#: src/ms-sound-row.c:308
+msgid "Choose sound file"
+msgstr "گزینش پروندهٔ صدا"
+
+#: src/ms-util.c:149
+msgid "Full"
+msgstr "پر"
+
+#: src/ms-util.c:151
+msgid "Quiet"
+msgstr "کم‌صدا"
+
+#: src/ms-util.c:153
+msgid "Silent"
+msgstr "بی‌صدا"
+
+#: src/ui/mobile-settings-window.ui:75
+msgid "Welcome"
+msgstr "خوش آمدید"
+
+#: src/ui/mobile-settings-window.ui:81
+msgid "Welcome to Mobile Settings"
+msgstr "به تنظیمات همراه خوش آمدید"
+
+#: src/ui/mobile-settings-window.ui:82
+msgid "Tweak advanced mobile settings"
+msgstr "سیخونک به تنظیمات همراه پیش‌رفته"
+
+#: src/ui/mobile-settings-window.ui:90
+msgid "Top Bar"
+msgstr "نوار بالا"
+
+#: src/ui/mobile-settings-window.ui:101
+msgid "Applications"
+msgstr "برنامه‌ها"
+
+#: src/ui/mobile-settings-window.ui:112
+msgid "Feedback"
+msgstr "بازخورد"
+
+#: src/ui/mobile-settings-window.ui:123
+msgid "Compositor"
+msgstr "ترکیب‌بند"
+
+#: src/ui/mobile-settings-window.ui:134
+msgid "Lockscreen"
+msgstr "صفحهٔ قفل"
+
+#: src/ui/mobile-settings-window.ui:145
+msgid "Convergence"
+msgstr "یکپارچگی"
+
+#: src/ui/mobile-settings-window.ui:156
+msgid "On Screen Keyboard"
+msgstr "صفحه‌کلید مجازی"
+
+#: src/ui/mobile-settings-window.ui:167 src/ui/ms-sensor-panel.ui:28
+msgid "Sensors"
+msgstr "حسگرها"
+
+#: src/ui/mobile-settings-window.ui:178
+msgid "Experimental features"
+msgstr "ویژگی‌های آزمایشی"
+
+#: src/ui/mobile-settings-window.ui:202
+msgid "_Keyboard Shortcuts"
+msgstr "_میان‌برهای صفحه‌کلید"
+
+#: src/ui/mobile-settings-window.ui:206
+msgid "_About Mobile Settings"
+msgstr "_دربارهٔ تنظیمات همراه"
+
+#: src/ui/ms-applications-panel.ui:11
+msgid "Favorites"
+msgstr "محبوب‌ها"
+
+#: src/ui/ms-applications-panel.ui:20
+msgid "Organize Favorites"
+msgstr "سازمان‌دهی محبوب‌ها"
+
+#: src/ui/ms-applications-panel.ui:21
+msgid "Drag and drop the apps below to rearrange your favorite apps"
+msgstr "برای تغییر جایگاه کاره‌های محبوبتان آن‌ها را کشیده و در زیر رها کنید"
+
+#: src/ui/ms-applications-panel.ui:46
+msgid "Reset Favorites"
+msgstr "بازنشانی برگزیده‌ها"
+
+#: src/ui/ms-applications-panel.ui:47
+msgid "Set list of favorite apps back to the default"
+msgstr "تنظیم دوبارهٔ سیاههٔ کاره‌های محبوب به پیش‌گزیده"
+
+#: src/ui/ms-applications-panel.ui:51
+msgid "Reset"
+msgstr "بازنشانی"
+
+#: src/ui/ms-applications-panel.ui:62
+msgid "Mobile App Filtering"
+msgstr "پالایش کارهٔ همراه"
+
+#: src/ui/ms-applications-panel.ui:65
+msgid "Set Application Filter Mode"
+msgstr "تنظیم حالت پالایش برنامه"
+
+#: src/ui/ms-applications-panel.ui:66
+msgid "Show only mobile apps in the overview"
+msgstr "فقط نمایش کاره‌های همراه در نمای کلی"
+
+#: src/ui/ms-compositor-panel.ui:11
+msgid "Scaling down of running applications"
+msgstr "کوچک کردن مقیاس برنامه‌های در حال اجرا"
+
+#: src/ui/ms-compositor-panel.ui:12
+msgid "Only enable this for broken apps that don't fit the screen"
+msgstr "به کار انداختن فقط برای کاره‌هایی که در صفحه جا نمی‌شوند"
+
+#: src/ui/ms-compositor-panel.ui:25
+msgid "Scale down all applications"
+msgstr "کوچک کردن مقیاس همهٔ برنامه‌ها"
+
+#: src/ui/ms-compositor-panel.ui:26
+msgid "Forcibly scale down all applications. Only use this as a last resort."
+msgstr "کوچک کردن اجباری مقیاس همهٔ برنامه‌ها. فقط استفاده به عنوان آخرین حربه."
+
+#: src/ui/ms-compositor-panel.ui:29
+msgid "Scale down all apps"
+msgstr "کوچک کردن مقیاس همهٔ کاره‌ها"
+
+#: src/ui/ms-compositor-panel.ui:35 src/ui/ms-convergence-panel.ui:35
+#: src/ui/ms-features-panel.ui:23 src/ui/ms-features-panel.ui:38
+#: src/ui/ms-lockscreen-panel.ui:37 src/ui/ms-osk-panel.ui:20
+#: src/ui/ms-osk-panel.ui:67 src/ui/ms-osk-panel.ui:83
+#: src/ui/ms-scale-to-fit-row.ui:11
+msgid "Enabled"
+msgstr "به کار افتاده"
+
+#: src/ui/ms-convergence-panel.ui:15
+msgid "No known docks detected"
+msgstr "هیچ دک شناخته شده‌ای پیدا نشد"
+
+#: src/ui/ms-convergence-panel.ui:29
+msgid "Map built-in touch screen"
+msgstr "نگاشت صفحهٔ لمسی توکار"
+
+#: src/ui/ms-features-panel.ui:11
+msgid "Experimental Features"
+msgstr "ویژگی‌های آزمایشی"
+
+#: src/ui/ms-features-panel.ui:12
+msgid "Features not yet deemed fully stable"
+msgstr "ویژگی‌هایی که هنوز کاملاً‌پایدار نیستند"
+
+#: src/ui/ms-features-panel.ui:16
+msgid "Emergency Calls"
+msgstr "تماس‌های اضطراری"
+
+#: src/ui/ms-features-panel.ui:17
+msgid ""
+"Enable emergency calls. Please only enable this if you safely can ensure that "
+"it's working with your provider."
+msgstr ""
+"به کار انداختن تماس‌های اضطراری. لطفاً فقط در صورت اطمینان از کار کردنش با "
+"اوپراتورتان به کارش بیندازید."
+
+#: src/ui/ms-features-panel.ui:31
+msgid "Enable suspend via the system menu"
+msgstr "به کار انداختن تعلیق از فهرست سامانه"
+
+#: src/ui/ms-features-panel.ui:33
+msgid ""
+"Please only enable this if you're aware of the limitations like data "
+"connection loss or missed alarms"
+msgstr ""
+"لطفاً فقط در صورت آگاهیتان از محدودیت‌هایی چون قطع اتّصال داده و از دست دادن "
+"هشدارها به کارش بیندازید"
+
+#: src/ui/ms-feedback-panel.ui:16
+msgid "Feedback profile"
+msgstr "نمایهٔ بازخورد"
+
+#: src/ui/ms-feedback-panel.ui:17
+msgid "The global maximum feedback profile"
+msgstr "نمایهٔ بازخوردی بیشینهٔ عمومی"
+
+#: src/ui/ms-feedback-panel.ui:32
+msgid "Prefer flash"
+msgstr "ترجیح فلاش"
+
+#: src/ui/ms-feedback-panel.ui:33
+msgid "Prefer camera flash over status LED when available"
+msgstr "ترجیح فلاش دوربین به چراغ وضعیت هنگام موجود بودن"
+
+#: src/ui/ms-feedback-panel.ui:41
+msgid "Per Application settings"
+msgstr "تنظیمات به ازای برنامه"
+
+#: src/ui/ms-feedback-panel.ui:54
+msgid "Sounds"
+msgstr "صداها"
+
+#: src/ui/ms-feedback-panel.ui:55
+msgid "The sound to use for certain events"
+msgstr "صدای استفاده شده برای رویدادهای خاص"
+
+#: src/ui/ms-feedback-panel.ui:63
+msgid "Phone Calls"
+msgstr "تماس‌های تلفنی"
+
+#: src/ui/ms-feedback-panel.ui:69
+msgid "SMS"
+msgstr "پیامک"
+
+#: src/ui/ms-feedback-panel.ui:75
+msgid "Instant messages"
+msgstr "پیام‌های فوری"
+
+#: src/ui/ms-feedback-panel.ui:86
+msgid "Screen Wakeup"
+msgstr "بیدار شدن صفحه"
+
+#: src/ui/ms-feedback-panel.ui:89
+msgid "Notification urgency that lights up the screen"
+msgstr "ضروریت آگاهی‌ای که صفحه را روشن می‌کند"
+
+#: src/ui/ms-lockscreen-panel.ui:12
+msgid "Locking and unlocking"
+msgstr "قفل و قفل‌گشایی"
+
+#: src/ui/ms-lockscreen-panel.ui:15
+msgid "Automatic screen lock delay"
+msgstr "تأخیر قفل صفحهٔ خودکار"
+
+#: src/ui/ms-lockscreen-panel.ui:16
+msgid "Seconds from screen blank to screen lock"
+msgstr "ثانیه‌ها از سیاه شدن صفحه تا قفل"
+
+#: src/ui/ms-lockscreen-panel.ui:30
+msgid "Shuffle keypad"
+msgstr "در هم ریختن شماره‌ها"
+
+#: src/ui/ms-lockscreen-panel.ui:31
+msgid "Whether to shuffle the numbers on the keypad"
+msgstr "این که رقم‌های روی صفحه در هم ریخته شوند یا نه"
+
+#: src/ui/ms-lockscreen-panel.ui:48
+msgid "Widgets"
+msgstr "ابزارک‌ها"
+
+#: src/ui/ms-lockscreen-panel.ui:49
+msgid "Additional widgets for the lock screen"
+msgstr "ابزارک‌های اضافی برای صفحهٔ قفل"
+
+#: src/ui/ms-osk-panel.ui:13
+msgid "Enable _On Screen Keyboard"
+msgstr "به کار انداختن صفحه‌کلید مجازی"
+
+#: src/ui/ms-osk-panel.ui:14
+msgid "Whether to show the on screen keyboard when needed"
+msgstr "این که صفحه‌کلید مجازی هنگام نیاز نشان داده شود یا نه"
+
+#: src/ui/ms-osk-panel.ui:28
+msgid "Unfold long-press"
+msgstr "نگه داشتتن برای جمع کردن"
+
+#: src/ui/ms-osk-panel.ui:29
+msgid ""
+"How long to press the center of the home bar to unfold the on screen keyboard"
+msgstr "چه قدر باید مرکز نوار خانه نگه داشته شود تا صفحه‌کلید مجازی جمع شود"
+
+#. 0.5
+#: src/ui/ms-osk-panel.ui:34
+msgid "short"
+msgstr "کوتاه"
+
+#. 2.0
+#: src/ui/ms-osk-panel.ui:38
+msgid "long"
+msgstr "بلند"
+
+#: src/ui/ms-osk-panel.ui:46
+msgid "Ignore hardware keyboard"
+msgstr "چشم‌پوشی از صفحه‌کلید سخت‌افزاری"
+
+#: src/ui/ms-osk-panel.ui:47
+msgid ""
+"Whether to show the on screen keyboard when a physical keyboard is present"
+msgstr "این که هنگام وجود صفحه‌کلید سخت‌افزاری، صفحه‌کلید مجازی نشان داده شود یا نه"
+
+#: src/ui/ms-osk-panel.ui:56
+msgid "Text Completion"
+msgstr "کامل کردن متن"
+
+#: src/ui/ms-osk-panel.ui:59
+msgid "Opportunistic word completion"
+msgstr "کامل کردن متن خوشبینانه"
+
+#: src/ui/ms-osk-panel.ui:60
+msgid "Enable word completion when the app indicates it is useful"
+msgstr "به کار انداختن کامل کردن متن هنگامی که کاره مفید بودنش را مشخّص کند"
+
+#: src/ui/ms-osk-panel.ui:75
+msgid "Toggle via OSK menu"
+msgstr "تغییر وضعیت با فهرست"
+
+#: src/ui/ms-osk-panel.ui:76
+msgid "Allow to toggle word completion via the keyboard's menu button"
+msgstr "اجازه به تغییر وضعیت کامل کردن متن با دکمهٔ فهرست صفحه‌کلید"
+
+#: src/ui/ms-osk-panel.ui:94
+msgid "Terminal Layout"
+msgstr "چینش پایانه"
+
+#: src/ui/ms-osk-panel.ui:98
+msgid "Shortcuts"
+msgstr "میان‌برها"
+
+#: src/ui/ms-osk-panel.ui:99
+msgid "The shortcuts available in the shortcuts bar"
+msgstr "میان‌برهای موجود در نوار میان‌برها"
+
+#: src/ui/ms-plugin-row.ui:41
+msgid "More options…"
+msgstr "گزینه‌های بیش‌تر…"
+
+#: src/ui/ms-plugin-row.ui:54
+msgid "Move Up"
+msgstr "جابه‌جایی به بالا"
+
+#: src/ui/ms-plugin-row.ui:58
+msgid "Move Down"
+msgstr "جابه‌جایی به پایین"
+
+#: src/ui/ms-sensor-panel.ui:16
+msgid "No Sensors found"
+msgstr "هیچ حسگری پیدا نشد"
+
+#: src/ui/ms-sensor-panel.ui:17
+msgid ""
+"Either there are no sensors installed on your device or they are disabled by a "
+"killswitch."
+msgstr "حسگری روی افزاره‌تان وجود نداشته یا با کلید سخت‌افزاری خاموش شده‌اند."
+
+#: src/ui/ms-sensor-panel.ui:32
+msgid "Sensor Readings"
+msgstr "خوانش‌های حسگر"
+
+#: src/ui/ms-sensor-panel.ui:40
+msgid "Proximity"
+msgstr "نزدیکی"
+
+#: src/ui/ms-sensor-panel.ui:49
+msgid "Light"
+msgstr "روشن"
+
+#: src/ui/ms-sensor-panel.ui:58
+msgid "Orientation"
+msgstr "جهت"
+
+#: src/ui/ms-sensor-panel.ui:69
+msgid "High Contrast"
+msgstr "سایه‌روشن زیاد"
+
+#: src/ui/ms-sensor-panel.ui:72
+msgid "Automatic High Contrast"
+msgstr "سایه‌روشن زیاد خودکار"
+
+#: src/ui/ms-sensor-panel.ui:73
+msgid "Controlled by the Ambient Light Sensor"
+msgstr "واپاییده با حسگر نور محیطی"
+
+#: src/ui/ms-sensor-panel.ui:84
+msgid "Light intensity threshold"
+msgstr "آستانهٔ تراکم نور"
+
+#: src/ui/ms-sensor-panel.ui:85
+msgid "Theme will switch to high contrast above the threshold"
+msgstr "زمینه در بالای آستانه به سایه‌روشن زیاد تغییر خواهد کرد"
+
+#: src/ui/ms-sound-row.ui:54
+msgid "Sound files (ogg)"
+msgstr "پرونده‌های صدا (اوگ)"
+
+#: src/ui/ms-topbar-panel.ui:12
+msgid "UI Elements"
+msgstr "عنصرهای میانای کاربری"
+
+#: src/ui/ms-topbar-panel.ui:16
+msgid "Show battery percentage"
+msgstr "نمایش درصد باتری"
+
+#: src/ui/ms-topbar-panel.ui:17
+msgid "Show exact charge level in the top bar"
+msgstr "نمایش سطح دقیق شارژ در نوار بالایی"
+
+#: src/ui/ms-topbar-panel.ui:23
+msgid "Avoid notches"
+msgstr "دوری از روآمدگی‌ها"
+
+#: src/ui/ms-topbar-panel.ui:24
+msgid "Don't place UI elements beneath notches and display cutouts"
+msgstr "قرار ندادن عنصرهای میانای کاربری زیر روآمدگی‌ها و بریدگی‌های صفحهٔ نمایش"
+
+#: src/ui/ms-topbar-panel.ui:34
+msgid "Quick Settings"
+msgstr "تنظیمات سریع"
+
+#: src/ui/ms-topbar-panel.ui:35
+msgid "Organize your additional Quick Settings"
+msgstr "سازمان دهی تنظیمات سریع اضافیتان"
+
+#~ msgid "Unlocking"
+#~ msgstr "قفل‌گشایی"

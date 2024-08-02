@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>mobi.phosh.MobileSettings.desktop</id>
+  <name>Phosh Mobile Settings</name>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <description>
+    <p>
+      This app allows you to configure some aspects of Phosh that would otherwise
+      require command line usage.
+    </p>
+  </description>
+  <summary>Advanced settings for Mobile devices using Phosh</summary>
+  <replaces>
+      <id>org.sigxcpu.MobileSettings</id>
+  </replaces>
+
+  <developer id="phosh.mobi">
+    <name>Phosh developers</name>
+  </developer>
+
+  <content_rating type="oars-1.1"/>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+
+  <url type="homepage">https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings</url>
+  <url type="bugtracker">https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/issues</url>
+
+  <launchable type="desktop-id">mobi.phosh.MobileSettings.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Available panels</caption>
+      <image>https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/raw/main/screenshots/panels.png?inline=false</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Compositor panel</caption>
+      <image>https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/raw/main/screenshots/compositor.png?inline=false</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Feedback panel</caption>
+      <image>https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/raw/main/screenshots/feedback.png?inline=false</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.40.0" date="2024-04-30">
+      <description>
+        <ul>
+          <li>Add more information to the trouble shooting page</li>
+          <li>Allow to configure whether to automatically avoid notches</li>
+          <li>Allow to set screen lock delay</li>
+          <li>Allow to order plugins via drag and drop</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.39.0" date="2024-05-15">
+      <description>
+        <ul>
+          <li>Allow to manage custom quick settings</li>
+          <li>osk panel: Allow to configure whether to ignore hardware keyboards</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.38.0" date="2024-04-02">
+      <description>
+        <ul>
+          <li>Add option to print debug info on the command line</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.37.0" date="2024-03-01">
+      <description>
+        <ul>
+          <li>Improve organizing favorites in the application panel</li>
+          <li>Improve sound file selection in feedback panel</li>
+          <li>Allow to set phosh overview's app filter mode</li>
+          <li>Ignore other plugin types when listing lockscreen plugins</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.36.0" date="2024-02-03">
+      <description>
+        <ul>
+          <li>Allow to arrange and reset Phosh's favorites</li>
+          <li>Allow to configure Phosh's OSK long press timer</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.35.0" date="2024-01-01">
+      <description>
+        <ul>
+          <li>Improve sound file selection</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.34.0" date="2023-12-04">
+      <description>
+        <ul>
+          <li>Add more information to trouble shooting tab</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.33.0" date="2023-10-28">
+      <description>
+        <ul>
+          <li>Add more information to trouble shooting tab</li>
+          <li>Avoid out of place scrollbars on larger screens</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.32.0" date="2023-10-02">
+      <description>
+        <ul>
+          <li>Allow to reorder lockscreen plugins</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.31.0" date="2023-08-29">
+      <description>
+        <ul>
+          <li>Allow to configure notification priority that triggers screen wakup</li>
+          <li>More troubleshooting information</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.30.0" date="2023-08-02">
+      <description>
+        <ul>
+          <li>Add troubleshooting tab to about dialog</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.29.0" date="2023-07-05">
+      <description>
+        <ul>
+          <li>New panel for sensor readings</li>
+          <li>Allow to enable suspend button in phosh</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.28.0" date="2023-05-31">
+      <description>
+        <ul>
+          <li>New panel to enable experimental features</li>
+          <li>Robustness fixes</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.27.0" date="2023-04-30">
+      <description>
+        <p>Allow to configure sounds for ring tone, SMS and instant messages</p>
+      </description>
+    </release>
+
+    <release version="0.26.0" date="2023-03-30">
+      <description>
+        <ul>
+          <li>Styling fixes</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.25.0" date="2023-02-28">
+      <description>
+        <ul>
+          <li>New OSK panel</li>
+          <li>Fix translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="0.24.1" date="2023-02-13">
+      <description><p>Lockscreen Plugin panel bug fixes</p></description>
+    </release>
+
+    <release version="0.24.0" date="2023-01-30">
+      <description><p>Lockscreen Plugin panel bug fixes</p></description>
+    </release>
+
+    <release version="0.23.1" date="2023-01-04">
+      <description><p>Bugfix release</p></description>
+    </release>
+
+    <release version="0.23.0" date="2022-12-28">
+      <description><p>Allow plugins to have preferences</p></description>
+    </release>
+
+    <release version="0.22.0" date="2022-11-02">
+      <description><p>Support UPERFECT X Mini lapdock</p></description>
+    </release>
+
+    <release version="0.21.1" date="2022-09-28">
+      <description><p>Bug fixes release</p></description>
+    </release>
+
+    <release version="0.21.0" date="2022-09-01">
+      <description><p>Allow to enable/disable lockscreen widgets and bug fixes</p></description>
+    </release>
+
+    <release version="0.20.0" date="2022-08-08">
+      <description><p>Initial release</p></description>
+    </release>
+  </releases>
+</component>
